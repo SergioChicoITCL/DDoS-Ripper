@@ -6,6 +6,15 @@ A Distributable Denied-of-Service (DDOS) attack server that cuts off targets or 
 DDoS attacks achieve effectiveness using multiple compromised computer systems as a source of attack traffic. Search engines may include computers and other network resources such as IoT devices.
 From a higher level, the DDOS attack is like an unexpected traffic jam stuck on a highway, preventing regular traffic from reaching its destination.
 
+# How this script works
+Two bots are configured in the python code, "http://validator.w3.org/check?uri=" and "http://www.facebook.com/sharer/sharer.php?u=".
+When executing this script, requests are sent to these bots to issue an action to the victim. 
+Also, request from the host are sent to the victim.
+This generates traffic from several sources to the victim.
+
+Be careful, as using the default bots could get you into trouble with "w3" and "facebook".
+To avoid trouble, create your own bots in your own servers and replace the default bots.
+
 ## NOTE (Please, make sure you have installed python 3 )
 
 ![dddd](https://user-images.githubusercontent.com/49250151/96265488-57e53d00-0f7a-11eb-8936-ce2e9a2c42cd.PNG)
@@ -80,6 +89,8 @@ Thanks.
 ●🖥MAC
 
 # Modified by @palahsu
+# Code deofuscated and cleaned by @lavieennoir
+# Readme updated by @SergioChicoITCL
 
 For any kind of help, support, payment, suggetion and request ask me on Telegram:
 
